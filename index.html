@@ -3,60 +3,82 @@
 <head>
     <title>EV Market Preference Survey</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        form { max-width: 600px; margin: auto; }
-        label { font-weight: bold; }
-        .section { margin-bottom: 20px; }
-        .question { margin-bottom: 10px; }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45A049;
+        }
     </style>
 </head>
 <body>
     <h2>Survey: Changing Economic Landscape in Reshaping the EV Market</h2>
-    
-    <!-- Participant Information -->
-    <p>This survey targets STEM professionals in Germany with an average of 5 years' experience. Participants were selected through professional networks, including LinkedIn, and are expected to have at least a B2 level in English and an undergraduate degree. Participants must fill out a consent form before proceeding.</p>
+    <p>This survey targets STEM professionals in Germany with an average of 5 years' experience. Participants were selected via professional networks and LinkedIn. Eligible participants must have at least a B2 level of English and an undergraduate degree.</p>
     
     <form>
-        <!-- Consent Form -->
         <div class="section">
-            <label class="question">Consent Form:</label><br>
+            <label>Consent Form:</label><br>
             <input type="checkbox" name="consent" required> I consent to participate in this research study.<br>
         </div>
         
-        <!-- Participant Demographics -->
         <div class="section">
-            <label class="question">1. Gender:</label><br>
-            <input type="radio" name="gender" value="Male"> Male<br>
-            <input type="radio" name="gender" value="Female"> Female<br>
+            <label>1. Gender:</label><br>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
             <input type="radio" name="gender" value="Other"> Other<br>
         </div>
-        
+
         <div class="section">
-            <label class="question">2. Years of Experience in STEM Field:</label><br>
+            <label>2. Years of Experience in STEM Field:</label><br>
             <input type="number" name="experience" min="1" required> years<br>
         </div>
         
-        <!-- Preferences -->
         <div class="section">
-            <label class="question">3. What is your preferred vehicle type?</label><br>
-            <input type="radio" name="vehicle_type" value="EV"> Electric Vehicle (EV)<br>
-            <input type="radio" name="vehicle_type" value="Gasoline"> Gasoline<br>
-            <input type="radio" name="vehicle_type" value="Hydrogen"> Hydrogen<br>
+            <label>3. What is your preferred vehicle type?</label><br>
+            <input type="radio" name="vehicle_type" value="EV"> Electric Vehicle (EV)
+            <input type="radio" name="vehicle_type" value="Gasoline"> Gasoline
+            <input type="radio" name="vehicle_type" value="Hydrogen"> Hydrogen
             <input type="radio" name="vehicle_type" value="Neutral"> Neutral / No preference<br>
         </div>
         
-        <!-- Concerns -->
         <div class="section">
-            <label class="question">4. What is your primary concern when buying a vehicle?</label><br>
-            <input type="checkbox" name="concern" value="Technology Maturity"> Technology Maturity<br>
-            <input type="checkbox" name="concern" value="Cost"> Cost<br>
-            <input type="checkbox" name="concern" value="Fuel Availability"> Fuel Availability<br>
+            <label>4. What is your primary concern when buying a vehicle?</label><br>
+            <input type="checkbox" name="concern" value="Technology Maturity"> Technology Maturity
+            <input type="checkbox" name="concern" value="Cost"> Cost
+            <input type="checkbox" name="concern" value="Fuel Availability"> Fuel Availability
             <input type="checkbox" name="concern" value="Range"> Range<br>
         </div>
         
-        <!-- Charging Infrastructure Opinion -->
         <div class="section">
-            <label class="question">5. How would you rate the current EV charging infrastructure in your region?</label><br>
+            <label>5. Rate the current EV charging infrastructure in your region:</label><br>
             <select name="charging_infrastructure">
                 <option value="Excellent">Excellent</option>
                 <option value="Good">Good</option>
@@ -65,23 +87,20 @@
             </select>
         </div>
         
-        <!-- Investment Confidence -->
         <div class="section">
-            <label class="question">6. Do you believe that continued investment in EV infrastructure will increase EV adoption?</label><br>
-            <input type="radio" name="investment_confidence" value="Yes"> Yes<br>
+            <label>6. Will continued investment in EV infrastructure increase EV adoption?</label><br>
+            <input type="radio" name="investment_confidence" value="Yes"> Yes
             <input type="radio" name="investment_confidence" value="No"> No<br>
         </div>
         
-        <!-- Consumer Behavior -->
         <div class="section">
-            <label class="question">7. How important is technological maturity when considering an EV purchase?</label><br>
-            <input type="range" name="tech_maturity_importance" min="1" max="5"> (1 = Not Important, 5 = Very Important)
+            <label>7. How important is technological maturity when considering an EV purchase? (1 = Not Important, 5 = Very Important)</label><br>
+            <input type="range" name="tech_maturity_importance" min="1" max="5">
         </div>
         
-        <!-- Additional Comments -->
         <div class="section">
-            <label class="question">8. Any additional comments regarding EVs and the current economic landscape:</label><br>
-            <textarea name="comments" rows="4" cols="50"></textarea>
+            <label>8. Additional comments on EVs and the current economic landscape:</label><br>
+            <textarea name="comments" rows="4" cols="60"></textarea>
         </div>
         
         <input type="submit" value="Submit Survey">
